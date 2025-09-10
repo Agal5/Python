@@ -1,0 +1,17 @@
+1)Find the maximum sum in the subarray
+def kandane(arr):
+    current_sum=0
+    max_sum=float('-inf')
+    
+    for num in arr:
+        current_sum+=num
+        max_sum=max(max_sum,current_sum)
+        
+        if current_sum<0:
+            current_sum=0
+    return max_sum
+    
+arr=[1,2,3,-1,-2,-3]
+print(kandane(arr))
+
+2)Find the maximum sum in the subarray,print the subarray
